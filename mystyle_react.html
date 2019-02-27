@@ -10,13 +10,19 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-        var mystyle = {
+        var myStyle = {
             color: 'red',
             fontSize: 12
         };
         ReactDOM.render(
-            <div style = {mystyle}>
-                <h1>Hello World</h1>
+            <div>
+              {
+                /*
+                  <div style = {myStyle}>
+                  not recommended
+                */
+              }
+                <h1 style = {myStyle/*recommended*/}>Hello World</h1>
             </div>,
             document.getElementById('example')
         );
